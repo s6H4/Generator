@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
+    <link rel="icon" type="image/png" href="../icons/lock.png">
     <link rel="stylesheet" href="../css/index.css">
     <script src="../javascript/index.js" defer></script>
 </head>
@@ -11,18 +12,29 @@
     <div class="container">
         <label for="length">Длина пароля:</label>
         <input type="text" id="length" inputmode="numeric" pattern="\d*" placeholder="Введите длину" value="10" maxlength="200" oninput="validateLength(this)">
-        
+
         <div class="checkbox-group">
-            <label><input type="checkbox" id="lowercase" checked> Строчные буквы</label>
-            <label><input type="checkbox" id="uppercase" checked> Заглавные буквы</label>
-            <label><input type="checkbox" id="numbers" checked> Цифры</label>
-            <label><input type="checkbox" id="special"> Спецсимволы</label>
+            <div class="checkbox-item">
+                <input type="checkbox" id="lowercase" checked>
+                <label for="lowercase" class="checkbox-label">Строчные буквы</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="uppercase" checked>
+                <label for="uppercase" class="checkbox-label">Заглавные буквы</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="numbers" checked>
+                <label for="numbers" class="checkbox-label">Цифры</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="special">
+                <label for="special" class="checkbox-label">Спецсимволы</label>
+            </div>
         </div>
-        
-        <br>
-        <button onclick="generatePassword()">Сгенерировать пароль</button>
+
+        <button onclick="generatePassword()">Сгенерировать</button>
         <button id="copyButton" onclick="copyPassword()">Копировать</button>
-        
+
         <div class="password-window" id="passwordWindow">
             <div class="password" id="password"></div>
         </div>

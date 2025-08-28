@@ -7,6 +7,7 @@ body {
     background-color: #0d1117;
     margin: 0;
     color: #c9d1d9;
+    user-select: none;
 }
 
 .container {
@@ -43,17 +44,14 @@ input[type="text"]:focus {
 
 button {
     padding: 10px 20px;
-    background-color: #238636;
+    background-color: #1f6feb;
     color: #ffffff;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     margin: 5px;
     font-size: 16px;
-}
-
-button:hover {
-    background-color: #2ea043;
+    width: 200px;
 }
 
 .password-window {
@@ -79,23 +77,32 @@ button:hover {
 
 .checkbox-group {
     text-align: left;
-    margin: 10px 25px;
+    margin: 15px 0;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.checkbox-group label {
+.checkbox-item {
     display: flex;
-    margin: 5px 0;
+    align-items: center;
+    margin: 12px 0;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #1f6feb;
+}
+
+.checkbox-label {
     font-size: 14px;
+    color: #c9d1d9;
     cursor: pointer;
-}
-
-.checkbox-group input[type="checkbox"] {
-    margin-right: 8px;
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-}
-
-.checkbox-group input[type="checkbox"]:checked {
-    accent-color: #238636;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0px 0px;
 }
