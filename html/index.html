@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <label for="length">Длина пароля:</label>
-        <input type="text" id="length" inputmode="numeric" pattern="\d*" placeholder="Введите длину" value="10" maxlength="200" oninput="validateLength(this)">
+        <input type="text" id="length" inputmode="numeric" pattern="\d*" placeholder="Введите длину" value="10" maxlength="200">
 
         <div class="checkbox-group">
             <div class="checkbox-item">
@@ -32,8 +32,8 @@
             </div>
         </div>
 
-        <button onclick="generatePassword()">Сгенерировать</button>
-        <button id="copyButton" onclick="copyPassword()">Копировать</button>
+        <button id="generateButton">Сгенерировать</button>
+        <button id="copyButton">Копировать</button>
 
         <div class="password-window" id="passwordWindow">
             <div class="password" id="password"></div>
